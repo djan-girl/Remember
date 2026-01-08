@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+    Affirmations
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h1>Affirmations</h1>
+        {% for affirmation in affirmations %}
+            <article class="affirmation">
+                <h2>
+                    <div class="affirmation_line">
+                        <a href="{% url 'affirmations:page' slug=affirmation.slug %}">
+                            "{{ affirmation.body }}"
+                        </a>
+                    </div>
+                </h2>
+            </article>
+        {% endfor %}
+        <div class="image">
+            <img width="900" height="600"src="{% static 'images/lilypads.png' %}" alt="lilypads">
+        </div>
+    </section>
+{% endblock %}

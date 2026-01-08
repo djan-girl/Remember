@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<meta charset="UTF-8">
+<div class="account">
+    {% if user.is_authenticated %}
+            <a href="{% url 'notes:new_note' %}">
+                <span role="img" aria-label="New Note" title="New Note">Notes</span>
+            </a> | 
+            <form class="logout" action="{% url 'users:logout' %}" method="note">
+                {% csrf_token %} 
+                <button class="logout-button" aria-label="User Logout" title="User Logout">Logout</button>
+            </form>
+        {% else %}
+            <a href="{% url 'users:register' %}">
+                <span role="img" aria-label="User Registration" title="User Registration">Register</span>
+            </a> | 
+            <a href="{% url 'users:login' %}">
+                <span role="img" aria-label="User Login" title="User Login">Log In</span>
+            </a>
+        {% endif %}
+</div>
+<title>
+    {% block title %}
+        ReMember
+    {% endblock %}
+</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<body>
+    <header>
+        <nav>
+            <h1>ReMember</h1>
+            <a href="/"> Home</a>
+            <a href="/about"> About</a>
+            <a href="/mindfulness"> Mindfulness</a>
+            <a href="{% url 'affirmations:list' %}"> Affirmations</a>
+            <a href="{% url 'notes:list' %}"> Notes</a>  
+        </nav>
+        {% block header %}
+        {% endblock %}
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <h6>© 2025 ReMember. All rights reserved.</h6>
+    </footer>
+</body>
+</html>

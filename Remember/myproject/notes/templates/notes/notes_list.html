@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+    Notes
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h1>Notes</h1>
+        {% for note in notes %}
+            <article class="note">
+                <h2>
+                    <a href="{% url 'notes:page' slug=note.slug %}">
+                        {{ note.body }}
+                    </a>
+                </h2>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}

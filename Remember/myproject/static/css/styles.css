@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background-color: #F0F3F8;
+    color: black;
+    font-size: 3rem;
+}
+
+.account {
+    text-align: right;
+    background-color: #A2C9C6;
+    font-size: 30px;
+    color: white;
+    padding-right: 10px;
+}
+
+.account a {
+    color:white;
+}
+
+nav {
+    padding: 1rem;
+    background-color: #A2C9C6;
+    color: white;
+    font-size: 2.5rem;
+    align-content: center;
+    text-align: center;
+}
+
+nav a {
+    padding-right: 20px;
+    padding-left: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+nav, img {
+    width: 100%;
+}
+
+button {
+    color: white;
+    background-color: #A2C9C6;
+    border-width: 0px;
+}
+
+.user {
+    background-color: #A2C9C6;
+    color: white;
+    text-align: right;
+}
+
+main {
+    flex-grow: 1;
+    display: grid;
+    place-content: left;
+    color: black;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+p, h2, h3 {
+    text-align: left;
+    font-size: 35px;
+    padding-left: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: grey;
+}
+
+p {
+    color: black;
+}
+
+.video {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    text-align: center;
+}
+
+.image {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 125px;
+    padding-right: 125px;
+    text-align: center;
+}
+
+h6 {
+    font-weight: normal;
+}
+
+footer {
+    font-size: 30px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #E6F2F1;
+    color: gray;
+    align-content: center;
+    text-align: center;
+}
+
+.affirmation {
+    padding-top: 10px;
+}
+
+.affirmation_line {
+    border-left-color: #A2C9C6;
+    border-left-width: 10px;
+    border-left-style: solid;
+    background-color: #E6F2F1;
+    font-style: italic;
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+}
