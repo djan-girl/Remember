@@ -1,0 +1,21 @@
+--- Start Django Project ---
+py -m venv .venv
+py -m pip install Django
+django-admin startproject (project name)
+django-admin startproject myproject
+
+--- Run Project ---
+.venv\scripts\activate
+cd myproject
+py manage.py runserver 3000
+
+--- Start an App ---
+python manage.py startapp (app name)
+
+--- Make Migrations ---
+py manage.py makemigrations
+py manage.py migrate
+
+--- Extras ---
+python manage.py createsuperuser
+python -m pip install Pillow
